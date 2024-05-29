@@ -40,7 +40,7 @@ from llm import get_response_from_llm
 def initialize_chat_history(session_state):
     if "chat_history" not in session_state:
         session_state.chat_history = [
-            AIMessage(content="Hello!"),
+            AIMessage(content="Hello! Please ask me any queries you have i will answer them based the context i have."),
         ]
 
 def display_chat_history(session_state, st):

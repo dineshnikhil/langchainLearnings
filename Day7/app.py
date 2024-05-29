@@ -6,8 +6,8 @@ st.title("Chat with WebSites")
 
 # Sidebar for additional context input and connect button
 with st.sidebar:
-    additional_context = st.text_input("Additional Context")
-    if st.button("Connect"):
+    additional_context = st.text_input("URl you want to scrape")
+    if st.button("Add"):
         st.session_state.additional_context = additional_context
         st.sidebar.write(f"Connected with context: {additional_context}")
 
@@ -24,4 +24,4 @@ user_query = st.chat_input("Type a message...")
 if 'additional_context' in st.session_state:
     handle_user_query(st.session_state, st, user_query, st.session_state.additional_context)
 else:
-    st.write("Please provide additional context and click Connect.")
+    st.write("Please provide URL of the website you want to know and press on Add button.")
