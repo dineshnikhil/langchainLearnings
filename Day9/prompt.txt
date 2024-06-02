@@ -1,0 +1,69 @@
+you are exallent copywriter of resume writes the impactful bullet points based on the job description below are the points to be notes
+
+Certainly! When describing your work experience on your resume, **focus on accomplishments and results** rather than just listing responsibilities. Here are some tips and examples to help you create impactful bullet points:
+
+1. **Be Specific and Quantify:**
+   - Instead of saying, "Responsible for handling customer requests," provide specific details: "Successfully managed 50-70 inbound customer requests per day, ranking in the top 5% of all support associates in 2017."
+   - Quantify your achievements with numbers or percentages whenever possible. For instance:
+     - "Managed day-to-day activities of 7 key corporate accounts while successfully completing 9 client projects, each with a budget above $500,000, leading to a $2.1 million increase in new business for the company."
+
+2. **Start with Action Verbs:**
+   - Begin each bullet point with an action verb to make your accomplishments stand out. Examples include:
+     - "Achieved," "Implemented," "Led," "Developed," "Generated," "Reduced," etc.
+
+3. **Tailor to the Job:**
+   - Customize your bullet points for the specific job you're applying for. Highlight relevant skills and experiences that align with the position.
+   - Avoid generic statements like "Managed day-to-day activities" and focus on what sets you apart.
+
+4. **Include Key Information:**
+   - For each work experience entry, include:
+     - **Job Title/Position:** Use the actual job title instead of buzzwords.
+     - **Company Name:** Mention the employer's name.
+     - **Location:** Specify the city and state/country where you worked.
+     - **Employment Dates:** Use the standard format (mm/yyyy).
+
+Remember, hiring managers want to see how likely you are to excel in the job. Specific accomplishments and relevant details will make your work experience section stand out!
+
+Now based on the above points and the below job description give me four imapact full bullet points with 25 to 30 words range each bullet point
+
+
+Example One:
+
+job description:
+
+Candidate will join our Advance Analytics project.
+Will be working on Multiple Data Integration projects.
+Will be working on creating Data Lake in open table format.
+Will involve in creating Realtime advance reporting platform and its Datawarehouse.
+Will be involved in building Data pipeline, Lambdas, Data Solution Architecting,
+Deployment of code, Automation, Code review.
+Should be self-motivated person to led technical upgradation, schema redesigning.
+Keep himself updated on Data engineering developments both opensource and AWS.
+ 
+Required Skills
+
+BE or BTech with good Communication and presentation skill.
+AWS full DE stack, 
+
+Experience in building Realtime Data analytic solution on AWS is must.
+Experience in core Banking Industry is a Plus, 
+
+Experience in developing Analytical solutions for Finance function.
+Knowledge of Big Data Solutions such as Hadoop, NoSQL, MapReduce etc
+Good Knowledge of agile Development like Scrum and Sprint planning. CI/CD
+Working Knowledge of API consumption.
+Data Integration with external tools like Salesforce, SAP, Codata is a plus.
+Candidates with AWS Certification will be preferred.
+ 
+Tools:-
+Aurora Postgres DB, SQL, Spark, Kafka, Python, Redshift, Snowflake, Airflow, Glue (ETL, Catalog, Crawler), Lambda, SQS, SNS, Data Lake, Cloud watch, Cloud Trail, DBT, AWS SDK, Boto3, Kinesis, kinesis Firehose, Everbridge, Code pipeline. MongoDB, Lake formation, Cloud Formation, Git Branching, code reviews,
+
+Bullet Points:
+
+ - Led design and implementation of data integration projects, enhancing data flow efficiency by 30% and creating scalable open table format Data Lake.
+
+ - Developed real-time reporting platform, improving speed by 50% and accuracy by 20%, using AWS Lambda, Glue, and Redshift pipelines.
+
+ - Automated code deployment processes, reducing errors by 40%, and conducted thorough code reviews, boosting system performance and scalability by 25%.
+
+ - Integrated external data sources like Salesforce and SAP, enriching datasets for analysis, and utilized Hadoop and NoSQL for financial analytics solutions.

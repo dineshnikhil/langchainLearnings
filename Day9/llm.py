@@ -34,6 +34,3 @@ def translate_llm(input_lang, output_lang, query):
     })
     
     return response
-
-
-print(translate_llm('English', 'Hindi', "I love programming!"))

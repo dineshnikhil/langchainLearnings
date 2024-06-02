@@ -1,5 +1,5 @@
 import streamlit as st
-from llm import translate_llm
+from llm import get_bllt_pnts_frm_desc
 
 # Set the page configuration
 st.set_page_config(layout="wide", page_title="Streamlit UI")
@@ -40,7 +40,7 @@ with col2:
     if st.button("Translate now"):
         with st.spinner("Translating..."):
             # Perform some action
-            response = translate_llm("English", "Hindi", str(input_text))
+            response = get_bllt_pnts_frm_desc(str(input_text))
             st.session_state.output_text = str(response)
 
 # Output field
