@@ -1,21 +1,21 @@
 import streamlit as st
 from llm import get_bllt_pnts_frm_desc
-
 # Set the page configuration
-st.set_page_config(layout="wide", page_title="Streamlit UI")
+st.set_page_config(layout="wide", page_title="Experience Bullet Points")
 
 # Title
-st.title("Streamlit UI")
+st.title("Get Experience Bullet Points")
+st.text("get tailred bullet points for your resume based on your experince and job description of job that ur applying for.")
 
 # Apply CSS to increase the width of the input and output text areas
 st.markdown(
     """
     <style>
     .input-text-area .stTextArea textarea {
-        width: 100% !important;
+        width: 80% !important;
     }
     .output-text-area .stTextArea textarea {
-        width: 100% !important;
+        width: 80% !important;
     }
     </style>
     """,
@@ -32,13 +32,13 @@ col1, col2, col3 = st.columns([2, 1, 2])
 # Input field
 with col1:
     st.markdown('<div class="input-text-area">', unsafe_allow_html=True)
-    input_text = st.text_area("Input Field", height=300)
+    input_text = st.text_area("Job Description", height=300, placeholder="past you job description here..!")
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Button to perform action
 with col2:
-    if st.button("Translate now"):
-        with st.spinner("Translating..."):
+    if st.button("Generate"):
+        with st.spinner("Processing..."):
             # Perform some action
             response = get_bllt_pnts_frm_desc(str(input_text))
             st.session_state.output_text = str(response)
@@ -46,5 +46,12 @@ with col2:
 # Output field
 with col3:
     st.markdown('<div class="output-text-area">', unsafe_allow_html=True)
-    output_text = st.text_area("Output Field", height=300, value=st.session_state.output_text, key="output_field")
+    output_text = st.text_area("Generated Bullet Points", height=300, value=st.session_state.output_text, key="output_field", placeholder="once you provide job description you will get bullet points.")
     st.markdown('</div>', unsafe_allow_html=True)
+
+# Chat Interface
+st.write("### Chat Interface")
+chat_input = st.text_input("Enter your message:")
+if st.button("Send"):
+    st.write(f"User: {chat_input}")
+    # Here you can add the logic to generate and display the response
