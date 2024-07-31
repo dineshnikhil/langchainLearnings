@@ -2,6 +2,8 @@ import streamlit as st
 import PyPDF2
 from langchain_core.messages import AIMessage, HumanMessage
 from llm import get_response_from_llm
+from llama_parse import LlamaParse
+import tempfile
 
 def initialize_chat_history(session_state):
     if "chat_history" not in session_state:
@@ -34,11 +36,17 @@ def handle_user_query(session_state, st, user_query, pdf_text):
         session_state.chat_history.append(AIMessage(content=response))
 
 def process_pdf(file):
+    print(file)
     reader = PyPDF2.PdfReader(file)
     text = ""
     for page in range(len(reader.pages)):
         text += reader.pages[page].extract_text()
     return text
+
+def process_pdf_with_llamaParser(file):
+    print(file)
+    document = LlamaParse(file)
+    return document[0].text
 
 def app():
     st.title("Chat With Your Own Resume")

@@ -9,6 +9,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_core.runnables import RunnablePassthrough
 from langchain import hub
 from langchain_community.document_loaders import PyMuPDFLoader
+from langchain_groq import ChatGroq
 
 
 load_dotenv()
@@ -16,9 +17,11 @@ load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 
 
 openAI_llm = ChatOpenAI()
+groq_llm = ChatGroq(temperature=0, model_name="llama3-70b-8192")
 output_parser = StrOutputParser()
 
 
@@ -57,7 +60,7 @@ Remember, hiring managers want to see how likely you are to excel in the job. Sp
     
     # print(chat_prompt)
     
-    chain = chat_prompt | openAI_llm | output_parser
+    chain = chat_prompt | groq_llm | output_parser
     
     response = chain.invoke({
         "job_description": job_description
@@ -101,7 +104,7 @@ def get_response_from_llm(pdf_text, question):
     text_splits = spliting_data(pdf_text)
     prompt = hub.pull("rlm/rag-prompt")
     # creating the llm
-    llm = ChatOpenAI()
+    llm = ChatGroq(temperature=0, model_name="llama3-8b-8192")
     
     rag_chain = (
         {"context": get_retriver_from_vectorStore(text_splits) | format_docs, "question": RunnablePassthrough()}
